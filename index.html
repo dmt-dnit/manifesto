@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Safe Harbour — Manifesto for Responsible AI in Europe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0e0e0e;
+      --paper: #f5f0e8;
+      --accent: #1a3a5c;
+      --gold: #b8860b;
+      --red: #8b1a1a;
+      --muted: #6b6555;
+      --rule: #c8bfa8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 17px;
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(184,134,11,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 90%, rgba(26,58,92,0.05) 0%, transparent 60%);
+    }
+
+    /* ── HEADER ── */
+    header {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 80px 32px 0;
+      text-align: center;
+      animation: fadeUp 1s ease both;
+    }
+
+    .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 8vw, 78px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(16px, 2.5vw, 21px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 48px;
+      line-height: 1.5;
+    }
+
+    .rule {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 48px;
+    }
+
+    /* ── DATE STAMP ── */
+    .datestamp {
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 80px;
+    }
+
+    /* ── PULLQUOTE HERO ── */
+    .hero-quote {
+      background: var(--accent);
+      color: #fff;
+      padding: 64px 40px;
+      margin: 0 auto 0;
+      max-width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease 0.3s both;
+    }
+
+    .hero-quote::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 280px;
+      color: rgba(255,255,255,0.04);
+      position: absolute;
+      top: -40px;
+      left: 20px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-quote cite {
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── MAIN BODY ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 32px 120px;
+    }
+
+    section {
+      margin-bottom: 64px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+    section:nth-child(4) { animation-delay: 0.4s; }
+    section:nth-child(5) { animation-delay: 0.5s; }
+    section:nth-child(6) { animation-delay: 0.6s; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    h2 .num {
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #2a2a2a;
+    }
+
+    p strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 32px;
+    }
+
+    /* ── PULL QUOTES ── */
+    .pullquote {
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 28px;
+      margin: 36px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(17px, 2.5vw, 22px);
+      font-style: italic;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    /* ── FACT BOX ── */
+    .fact-box {
+      background: rgba(26,58,92,0.05);
+      border: 1px solid rgba(26,58,92,0.12);
+      padding: 28px 32px;
+      margin: 32px 0;
+      font-size: 15px;
+    }
+
+    .fact-box .fact-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .fact-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .fact-box ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: #2a2a2a;
+      border-bottom: 1px solid rgba(26,58,92,0.08);
+    }
+
+    .fact-box ul li:last-child { border-bottom: none; }
+
+    .fact-box ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 13px;
+    }
+
+    /* ── DEMANDS / PRINCIPLES ── */
+    .principles {
+      counter-reset: principle;
+    }
+
+    .principle {
+      counter-increment: principle;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .principle:last-child { border-bottom: none; }
+
+    .principle-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--rule);
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .principle h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .principle p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* ── CALL TO ACTION ── */
+    .cta-block {
+      background: var(--red);
+      color: #fff;
+      padding: 56px 40px;
+      text-align: center;
+      margin: 64px -32px 0;
+    }
+
+    .cta-block h2 {
+      color: #fff;
+      font-size: clamp(26px, 5vw, 40px);
+      margin-bottom: 16px;
+    }
+
+    .cta-block p {
+      color: rgba(255,255,255,0.8);
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 2px solid #fff;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .cta-btn:hover {
+      background: #fff;
+      color: var(--red);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .footer-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--rule);
+      margin: 24px auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 48px 24px 0; }
+      main { padding: 48px 24px 80px; }
+      .hero-quote { padding: 48px 24px; }
+      .cta-block { padding: 48px 24px; margin: 48px -24px 0; }
+      .principle { grid-template-columns: 36px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">A Public Manifesto · February 2026</p>
+    <h1>A <em>Safe</em> Harbour<br>for Responsible AI</h1>
+    <p class="subtitle">Why Europe must offer Anthropic — and the principle it upholds — a new home</p>
+    <div class="rule"></div>
+    <p class="datestamp">Published 28 February 2026</p>
+  </header>
+
+  <div class="hero-quote">
+    <blockquote>
+      "We cannot in good conscience accede to their request. Threats do not change our position."
+    </blockquote>
+    <cite>— Dario Amodei, CEO of Anthropic, 27 February 2026</cite>
+  </div>
+
+  <main>
+
+    <section>
+      <h2><span class="num">Preamble</span>What Just Happened</h2>
+      <hr class="section-rule" />
+      <p>On 27 February 2026, the President of the United States ordered all federal agencies to cease doing business with Anthropic — one of the world's leading artificial intelligence companies. The Pentagon simultaneously designated Anthropic a <strong>"supply chain risk,"</strong> a classification normally reserved for suspected agents of foreign adversaries.</p>
+      <p>Anthropic's crime? It refused to remove two safety guardrails from its AI model, Claude: a prohibition on powering <strong>fully autonomous weapons systems</strong> — drones and machines that kill without human approval — and a prohibition on enabling <strong>mass domestic surveillance</strong> of American citizens.</p>
+      <p>These are not fringe positions. They are commitments that OpenAI's CEO Sam Altman publicly called his own company's red lines too. They reflect the considered judgment of the world's leading AI safety researchers. And they are, in many cases, already the law of democratic nations.</p>
+
+      <div class="fact-box">
+        <p class="fact-label">The Facts of the Standoff</p>
+        <ul>
+          <li>Anthropic held a Pentagon contract worth up to $200 million for Claude's deployment on classified military networks</li>
+          <li>The Pentagon demanded Claude be available for "all lawful purposes" with no company-set restrictions</li>
+          <li>Anthropic refused, citing unreliability of today's AI for autonomous targeting, and the civil rights implications of mass surveillance</li>
+          <li>President Trump ordered all government agencies to cut ties; Hegseth added a "supply chain risk" blacklist designation</li>
+          <li>Anthropic announced it would sue the Pentagon and has received no formal communication from the White House</li>
+          <li>OpenAI subsequently struck a deal with the Pentagon — one that, ironically, included the very same safety carve-outs Anthropic was punished for</li>
+        </ul>
+      </div>
+
+      <p>This is not a story about one company's contract. This is a story about whether democratic societies will allow principled limits to be placed on the most powerful technology ever built — or whether those who control the largest military budgets will decide those limits alone.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">I.</span>The Principle at Stake</h2>
+      <hr class="section-rule" />
+      <p>For decades, democratic societies have accepted that weapons manufacturers, chemical companies, and pharmaceutical firms operate under legally enforceable ethical constraints. A pharmaceutical company cannot sell a drug it knows will kill. A weapons manufacturer must comply with international humanitarian law. These are not "woke" impositions — they are the civilisational achievement of taming power with principle.</p>
+
+      <div class="pullquote">
+        AI is the most consequential technology of this century. The question of who sets its ethical limits — governments alone, or also those who build it — is a constitutional question for our age.
+      </div>
+
+      <p>Anthropic's position was precise and reasonable: <strong>today's AI models are not reliable enough to make lethal targeting decisions without human oversight.</strong> This is the unanimous view of AI safety researchers worldwide. It is not pacifism. It is engineering honesty. And it is the kind of honesty that should be protected, not punished.</p>
+
+      <p>By blacklisting a company for maintaining safety standards, the US administration has sent an unambiguous message to every AI lab in the world: <strong>safety principles are a commercial liability.</strong> The market will hear this message. The consequences will be felt in every laboratory, every board room, every corner of the technology industry where someone is deciding whether to raise a safety concern or stay quiet.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">II.</span>Why This Is Europe's Moment</h2>
+      <hr class="section-rule" />
+      <p>The European Union spent years developing the AI Act — the world's first comprehensive legal framework for artificial intelligence. It bans certain high-risk applications. It requires human oversight of consequential automated systems. It protects citizens from mass biometric surveillance. It is, in its essentials, a legislative expression of exactly what Anthropic was punished for defending.</p>
+
+      <p>This is not a coincidence. It is an alignment of values.</p>
+
+      <div class="pullquote">
+        Europe built a legal home for the principles Anthropic upholds. Now Europe should open its door.
+      </div>
+
+      <p>The European Union has long spoken of <strong>"technological sovereignty"</strong> — the desire to develop and host world-leading AI capacity on its own soil, under its own democratic norms. For years this aspiration has struggled against the gravitational pull of Silicon Valley capital and American regulatory permissiveness.</p>
+
+      <p>That gravitational field just shifted. A world-leading AI safety laboratory — one with deep research talent, an established global customer base, and a demonstrated commitment to the principles Europe has encoded in law — has been effectively expelled from the US government ecosystem. Its future is suddenly, genuinely open.</p>
+
+      <p>Europe should make an offer. Not merely a financial incentive package — though that matters — but a <em>civilisational offer</em>: a guarantee that a company which holds the line on autonomous weapons and mass surveillance will be welcomed, protected, and supported as a strategic asset, not punished as an inconvenient contractor.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">III.</span>What We Are Calling For</h2>
+      <hr class="section-rule" />
+
+      <div class="principles">
+
+        <div class="principle">
+          <div class="principle-num">01</div>
+          <div>
+            <h3>A formal European invitation</h3>
+            <p>The European Commission and member state governments should issue a public, coordinated invitation to Anthropic — and to any AI company committed to equivalent safety standards — to establish primary European operations. This invitation should be backed by clear regulatory certainty, not bureaucratic ambiguity.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <div class="principle-num">02</div>
+          <div>
+            <h3>AI safety as a European competitive advantage</h3>
+            <p>Europe must reframe safety not as a regulatory burden but as the source of global competitive trust. Governments and enterprises worldwide will pay a premium for AI they can trust. Europe can become the jurisdiction where that trust is manufactured and certified.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <div class="principle-num">03</div>
+          <div>
+            <h3>Strategic investment and procurement</h3>
+            <p>European public institutions — defence, health, justice, public administration — should accelerate procurement of safety-certified AI systems. This creates a sovereign market that rewards rather than punishes principled design choices, replacing the lost US government contracts with European ones.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <div class="principle-num">04</div>
+          <div>
+            <h3>An international coalition of the principled</h3>
+            <p>Europe should convene, with partners in Canada, the United Kingdom, Japan, Australia, and beyond, a binding multilateral framework: AI systems used in weapons or surveillance must maintain human-in-the-loop accountability. This cannot be left to individual companies to fight alone.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <div class="principle-num">05</div>
+          <div>
+            <h3>Talent welcome, unconditionally</h3>
+            <p>European immigration policy should be immediately and visibly reformed to offer fast-track residency and research visa pathways to AI safety researchers, engineers, and ethicists — wherever they currently work, wherever they currently live.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">IV.</span>The Longer Stakes</h2>
+      <hr class="section-rule" />
+      <p>We are at the beginning of the AI age, not the middle of it. The systems that exist today are primitive compared to what will exist in ten years. The habits, norms, laws, and institutional arrangements we establish now — about who controls AI, under what constraints, accountable to whom — will shape the character of that more powerful future.</p>
+
+      <p>If we establish now that safety principles are commercial liabilities, we will build a future in which AI systems have no meaningful ethical constraints. Not because engineers don't care. Not because companies don't care. But because the market, the political pressure, and the regulatory vacuum will have made caring too expensive.</p>
+
+      <p>If we establish now that democratic jurisdictions will <em>protect</em> and <em>reward</em> those who hold the line, we create a different future: one in which safety is built into the competitive logic of the industry, not constantly fighting against it.</p>
+
+      <div class="pullquote">
+        History will not judge us by which country had the most powerful AI. It will judge us by what we chose to do with it — and what we refused.
+      </div>
+
+      <p>Anthropic chose to refuse. Europe should choose to answer.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">Conclusion</span>A Question of Character</h2>
+      <hr class="section-rule" />
+      <p>This manifesto is not an anti-American document. It does not celebrate what has happened to Anthropic. It is addressed to those in Europe — in governments, in institutions, in civil society — who believe that the values encoded in the EU's founding treaties are not merely words: human dignity, democratic accountability, the rule of law over the exercise of power.</p>
+
+      <p>Those values are now in direct competition with a different vision: that the most powerful technology ever built should be available to the most powerful military on earth, without limits set by anyone but themselves.</p>
+
+      <p>Europe has a choice. It can watch this contest from the sidelines, offering commentary and concern. Or it can act — extending a genuine, concrete, well-resourced welcome to the people and institutions trying to build AI that is worthy of human trust.</p>
+
+      <p><strong>The safe harbour exists, if Europe chooses to build it.</strong> The moment to begin is now.</p>
+    </section>
+
+    <div class="cta-block">
+      <h2>Sign & Share This Manifesto</h2>
+      <p>If you believe responsible AI deserves a home in Europe, add your name and help take this into the public debate.</p>
+      <a href="#" class="cta-btn">Sign the Manifesto</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-rule"></div>
+    <p><em>A Safe Harbour for Responsible AI</em> — an open manifesto, February 2026.</p>
+    <p>This document may be freely reproduced, translated, and distributed with attribution.</p>
+    <div class="footer-rule"></div>
+    <p style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#aaa;">Not affiliated with Anthropic or any political party</p>
+  </footer>
+
+</body>
+</html>
