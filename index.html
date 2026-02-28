@@ -166,6 +166,7 @@
     section:nth-child(4) { animation-delay: 0.4s; }
     section:nth-child(5) { animation-delay: 0.5s; }
     section:nth-child(6) { animation-delay: 0.6s; }
+    section:nth-child(7) { animation-delay: 0.7s; }
 
     h2 {
       font-family: 'Playfair Display', serif;
@@ -253,6 +254,15 @@
       left: 0;
       color: var(--gold);
       font-size: 13px;
+    }
+
+    .fact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,58,92,0.25);
+    }
+    .fact-box a:hover {
+      border-bottom-color: rgba(26,58,92,0.55);
     }
 
     /* ── DEMANDS / PRINCIPLES ── */
@@ -449,9 +459,40 @@
 
   <div class="hero-quote">
     <blockquote>
-      "No amount of intimidation or punishment from the Department of War will change our position."
+      "No amount of intimidation or punishment will change our position."
     </blockquote>
     <cite>— Anthropic official statement, 27 February 2026</cite>
+
+    <div class="share-row">
+      <p class="share-label">Share</p>
+      <div class="share-buttons">
+
+        <a class="share-btn share-x" target="_blank" rel="noopener"
+          href="https://twitter.com/intent/tweet?text=A%20company%20was%20blacklisted%20for%20refusing%20to%20build%20autonomous%20killing%20machines.%20Europe%20should%20offer%20it%20a%20home.&url=https%3A%2F%2Fmanifesto-red.vercel.app">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.737-8.835L2.002 2.25h6.928l4.27 5.648L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+
+        <a class="share-btn share-li" target="_blank" rel="noopener"
+          href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmanifesto-red.vercel.app&title=A%20Safe%20Harbour%20for%20Responsible%20AI&summary=A%20company%20was%20blacklisted%20for%20refusing%20to%20let%20AI%20kill%20without%20human%20oversight.%20Europe%20should%20welcome%20it.">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+
+        <a class="share-btn share-bsky" target="_blank" rel="noopener"
+          href="https://bsky.app/intent/compose?text=A%20company%20was%20blacklisted%20for%20refusing%20to%20build%20autonomous%20killing%20machines.%20Europe%20should%20offer%20it%20a%20home.%20Read%20the%20manifesto%3A%20https%3A%2F%2Fmanifesto-red.vercel.app">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 01-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+          Bluesky
+        </a>
+
+        <a class="share-btn share-wa" target="_blank" rel="noopener"
+          href="https://wa.me/?text=A%20company%20was%20blacklisted%20for%20refusing%20to%20let%20AI%20kill%20without%20human%20oversight.%20Europe%20should%20welcome%20it.%20Read%20the%20manifesto%3A%20https%3A%2F%2Fmanifesto-red.vercel.app">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+
+      </div>
+    </div>
   </div>
 
   <main>
@@ -460,18 +501,20 @@
       <h2><span class="num">Preamble</span>What Just Happened</h2>
       <hr class="section-rule" />
       <p>On 27 February 2026, the President of the United States ordered all federal agencies to cease doing business with Anthropic — one of the world's leading artificial intelligence companies. The Pentagon simultaneously designated Anthropic a <strong>"supply chain risk,"</strong> a classification normally reserved for suspected agents of foreign adversaries.</p>
-      <p>Anthropic's crime? It refused to remove two safety guardrails from its AI model, Claude: a prohibition on powering <strong>fully autonomous weapons systems</strong> — drones and machines that kill without human approval — and a prohibition on enabling <strong>mass domestic surveillance</strong> of American citizens.</p>
-      <p>These are not fringe positions. They are commitments that OpenAI's CEO Sam Altman said he shares — publicly stating his company has the same concerns. They reflect the considered judgment of the world's leading AI safety researchers. And they are, in many cases, already the law of democratic nations.</p>
+
+      <p><strong>What triggered the standoff?</strong> Anthropic refused to remove two safety guardrails from its AI model, Claude: a prohibition on powering <strong>fully autonomous weapons systems</strong> — machines that can select and engage targets without meaningful human control — and a prohibition on enabling <strong>mass domestic surveillance</strong> of citizens.</p>
+
+      <p>These are not fringe positions. They reflect a widely held view among AI safety and security experts: today’s systems are powerful, but still fallible, and must not be treated as reliable decision-makers in lethal or rights-eroding contexts. In many democratic jurisdictions, the underlying principles — oversight, accountability, proportionality, and civil-rights protections — are already embedded in law and procurement rules.</p>
 
       <div class="fact-box">
         <p class="fact-label">The Facts of the Standoff</p>
         <ul>
           <li>Anthropic held a Pentagon contract worth up to $200 million for Claude's deployment on classified military networks</li>
           <li>The Pentagon demanded Claude be available for "all lawful purposes" with no company-set restrictions</li>
-          <li>Anthropic refused, citing unreliability of today's AI for autonomous targeting, and the civil rights implications of mass surveillance</li>
-          <li>President Trump ordered all government agencies to cut ties; Hegseth added a "supply chain risk" blacklist designation</li>
+          <li>Anthropic refused, citing the unreliability of today's AI for autonomous targeting, and the civil rights implications of mass surveillance</li>
+          <li>The U.S. administration ordered federal agencies to cut ties; the Pentagon added a "supply chain risk" blacklist designation</li>
           <li>Anthropic announced it would challenge any supply chain risk designation in court, calling it "legally unsound" and a dangerous precedent</li>
-          <li>OpenAI subsequently struck a deal with the Pentagon — one that, ironically, included the very same safety carve-outs Anthropic was punished for</li>
+          <li>OpenAI subsequently struck a deal with the Pentagon that reportedly included safeguards and limitations on certain high-risk uses</li>
         </ul>
       </div>
 
@@ -481,15 +524,15 @@
     <section>
       <h2><span class="num">I.</span>The Principle at Stake</h2>
       <hr class="section-rule" />
-      <p>For decades, democratic societies have accepted that weapons manufacturers, chemical companies, and pharmaceutical firms operate under legally enforceable ethical constraints. A pharmaceutical company cannot sell a drug it knows will kill. A weapons manufacturer must comply with international humanitarian law. These are not "woke" impositions — they are the civilisational achievement of taming power with principle.</p>
+      <p>For decades, democratic societies have accepted that weapons manufacturers, chemical companies, and pharmaceutical firms operate under legally enforceable ethical constraints. A pharmaceutical company cannot sell a drug it knows will kill. A weapons manufacturer must comply with international humanitarian law. These are not ideological impositions — they are the civilisational achievement of taming power with principle.</p>
 
       <div class="pullquote">
         AI is the most consequential technology of this century. The question of who sets its ethical limits — governments alone, or also those who build it — is a constitutional question for our age.
       </div>
 
-      <p>Anthropic's position was precise and reasonable: <strong>today's AI models are not reliable enough to make lethal targeting decisions without human oversight.</strong> This is the unanimous view of AI safety researchers worldwide. It is not pacifism. It is engineering honesty. And it is the kind of honesty that should be protected, not punished.</p>
+      <p>Anthropic's position was precise and reasonable: <strong>today's AI models are not reliable enough to make lethal targeting decisions without meaningful human oversight.</strong> This is a widely held view among AI safety and security researchers. It is not pacifism. It is engineering honesty. And it is the kind of honesty that should be protected, not punished.</p>
 
-      <p>By blacklisting a company for maintaining safety standards, the US administration has sent an unambiguous message to every AI lab in the world: <strong>safety principles are a commercial liability.</strong> The market will hear this message. The consequences will be felt in every laboratory, every board room, every corner of the technology industry where someone is deciding whether to raise a safety concern or stay quiet.</p>
+      <p>By blacklisting a company for maintaining safety standards, the US administration has sent a message to every AI lab in the world: <strong>safety principles can become a commercial liability.</strong> The market will hear this message. The consequences will be felt in every laboratory, every board room, every corner of the technology industry where someone is deciding whether to raise a safety concern or stay quiet.</p>
     </section>
 
     <section>
@@ -527,21 +570,41 @@
         <div class="principle">
           <div class="principle-num">02</div>
           <div>
-            <h3>AI safety as a European competitive advantage</h3>
-            <p>Europe must reframe safety not as a regulatory burden but as the source of global competitive trust. Governments and enterprises worldwide will pay a premium for AI they can trust. Europe can become the jurisdiction where that trust is manufactured and certified.</p>
+            <h3>A dual-home structure with EU-anchored governance</h3>
+            <p>Anthropic should be able to keep global operations while placing <strong>model release control and safety governance</strong> inside a European entity: release gating for model versions, enforceable restrictions for high-risk deployments, and a <strong>Safety &amp; Democracy Committee</strong> with binding veto power over mass surveillance and fully autonomous lethal use.</p>
           </div>
         </div>
 
         <div class="principle">
           <div class="principle-num">03</div>
           <div>
-            <h3>Strategic investment and procurement</h3>
-            <p>European public institutions — defence, health, justice, public administration — should accelerate procurement of safety-certified AI systems. This creates a sovereign market that rewards rather than punishes principled design choices, replacing the lost US government contracts with European ones.</p>
+            <h3>AI safety as a European competitive advantage</h3>
+            <p>Europe must reframe safety not as a regulatory burden but as the source of global competitive trust. Governments and enterprises worldwide will pay a premium for AI they can trust. Europe can become the jurisdiction where that trust is manufactured and certified.</p>
           </div>
         </div>
 
         <div class="principle">
           <div class="principle-num">04</div>
+          <div>
+            <h3>Strategic investment and procurement</h3>
+            <p>European public institutions — defence, health, justice, and public administration — should accelerate procurement of safety-certified AI systems. This creates a sovereign market that rewards rather than punishes principled design choices, <strong>replacing the lost US government contracts with European ones</strong>.</p>
+
+            <div class="fact-box" style="margin-top:18px;">
+              <p class="fact-label">What Europe can procure immediately (high-trust, non-lethal)</p>
+              <ul>
+                <li><strong>Cyber defence</strong>: SOC triage, incident response copilots, phishing and malware analysis support</li>
+                <li><strong>Critical infrastructure resilience</strong>: emergency planning, dependency mapping, scenario simulation support</li>
+                <li><strong>Public service productivity</strong>: secure drafting, translation, casework support with audit logs and access controls</li>
+                <li><strong>Regulated compliance</strong>: policy analysis support, procurement and legal drafting assistance, controlled document workflows</li>
+              </ul>
+            </div>
+
+            <p style="margin-top:14px;"><strong>Procurement should be tied to governance:</strong> EU-based release control, binding veto over red-line deployments, independent oversight, and published safety evaluation summaries.</p>
+          </div>
+        </div>
+
+        <div class="principle">
+          <div class="principle-num">05</div>
           <div>
             <h3>An international coalition of the principled</h3>
             <p>Europe should convene, with partners in Canada, the United Kingdom, Japan, Australia, and beyond, a binding multilateral framework: AI systems used in weapons or surveillance must maintain human-in-the-loop accountability. This cannot be left to individual companies to fight alone.</p>
@@ -549,9 +612,9 @@
         </div>
 
         <div class="principle">
-          <div class="principle-num">05</div>
+          <div class="principle-num">06</div>
           <div>
-            <h3>Talent welcome, unconditionally</h3>
+            <h3>Talent welcome, fast and visible</h3>
             <p>European immigration policy should be immediately and visibly reformed to offer fast-track residency and research visa pathways to AI safety researchers, engineers, and ethicists — wherever they currently work, wherever they currently live.</p>
           </div>
         </div>
@@ -576,6 +639,28 @@
     </section>
 
     <section>
+      <h2><span class="num">Sources</span>Reporting and primary statements</h2>
+      <hr class="section-rule" />
+      <p style="font-size:15px; color:#2a2a2a;">
+        This manifesto summarizes publicly reported information and primary statements. Key references:
+      </p>
+
+      <div class="fact-box">
+        <ul>
+          <li><a href="https://apnews.com/article/anthropic-pentagon-ai-hegseth-dario-amodei-b72d1894bc842d9acf026df3867bee8a" target="_blank" rel="noopener">Associated Press: reporting on the standoff and contract implications</a></li>
+          <li><a href="https://www.anthropic.com/news/statement-department-of-war" target="_blank" rel="noopener">Anthropic: primary statement</a></li>
+          <li><a href="https://www.axios.com/2026/02/27/anthropic-pentagon-supply-chain-risk-claude" target="_blank" rel="noopener">Axios: coverage of “supply chain risk” framing</a></li>
+          <li><a href="https://www.theverge.com/policy/886632/pentagon-designates-anthropic-supply-chain-risk-ai-standoff" target="_blank" rel="noopener">The Verge: coverage and context</a></li>
+          <li><a href="https://www.washingtonpost.com/technology/2026/02/27/trump-anthropic-claude-drop/" target="_blank" rel="noopener">The Washington Post: reporting on the broader decision (may be paywalled)</a></li>
+        </ul>
+      </div>
+
+      <p style="font-size:13px; color: var(--muted);">
+        Links are provided for reader verification; the argument of the manifesto stands independently of any single outlet.
+      </p>
+    </section>
+
+    <section>
       <h2><span class="num">Conclusion</span>A Question of Character</h2>
       <hr class="section-rule" />
       <p>This manifesto is not an anti-American document. It does not celebrate what has happened to Anthropic. It is addressed to those in Europe — in governments, in institutions, in civil society — who believe that the values encoded in the EU's founding treaties are not merely words: human dignity, democratic accountability, the rule of law over the exercise of power.</p>
@@ -595,42 +680,9 @@
         <iframe data-tally-src="https://tally.so/embed/QKABOY?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="540" frameborder="0" marginheight="0" marginwidth="0" title="A Safe Harbour — Manifesto for Responsible AI in Europe"></iframe>
       </div>
 
-      <div class="share-row">
-        <p class="share-label">Then share it</p>
-        <div class="share-buttons">
-
-          <a class="share-btn share-x" target="_blank" rel="noopener"
-            href="https://twitter.com/intent/tweet?text=A%20company%20was%20blacklisted%20for%20refusing%20to%20build%20autonomous%20killing%20machines.%20Europe%20should%20offer%20it%20a%20home.&url=https%3A%2F%2Fmanifesto-red.vercel.app">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.737-8.835L2.002 2.25h6.928l4.27 5.648L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            X / Twitter
-          </a>
-
-          <a class="share-btn share-li" target="_blank" rel="noopener"
-            href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmanifesto-red.vercel.app&title=A%20Safe%20Harbour%20for%20Responsible%20AI&summary=A%20company%20was%20blacklisted%20for%20refusing%20to%20let%20AI%20kill%20without%20human%20oversight.%20Europe%20should%20welcome%20it.">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-
-          <a class="share-btn share-fb" target="_blank" rel="noopener"
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmanifesto-red.vercel.app">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </a>
-
-          <a class="share-btn share-bsky" target="_blank" rel="noopener"
-            href="https://bsky.app/intent/compose?text=A%20company%20was%20blacklisted%20for%20refusing%20to%20build%20autonomous%20killing%20machines.%20Europe%20should%20offer%20it%20a%20home.%20Read%20the%20manifesto%3A%20https%3A%2F%2Fmanifesto-red.vercel.app">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 01-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
-            Bluesky
-          </a>
-
-          <a class="share-btn share-wa" target="_blank" rel="noopener"
-            href="https://wa.me/?text=A%20company%20was%20blacklisted%20for%20refusing%20to%20let%20AI%20kill%20without%20human%20oversight.%20Europe%20should%20welcome%20it.%20Read%20the%20manifesto%3A%20https%3A%2F%2Fmanifesto-red.vercel.app">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </a>
-
-        </div>
-      </div>
+      <p style="margin-top:18px; font-size:13px; color: var(--muted); max-width:520px; margin-left:auto; margin-right:auto;">
+        Not affiliated with Anthropic or any political party.
+      </p>
     </div>
 
   </main>
@@ -640,9 +692,9 @@
     <p><em>A Safe Harbour for Responsible AI</em> — an open manifesto, February 2026.</p>
     <p>This document may be freely reproduced, translated, and distributed with attribution.</p>
     <div class="footer-rule"></div>
-    <p style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#aaa;">Not affiliated with Anthropic or any political party</p>
-    <div class="footer-rule"></div>
-    <p style="font-size:12px; color:#999; max-width:520px; margin:0 auto; line-height:1.7;">✦ Transparency: This manifesto and website were written and generated by <strong>Claude</strong> (Anthropic&apos;s AI assistant), based on the ideas, direction, and inspiration of <strong>Dimitri</strong> — software developer, former public servant. The concept, arguments, and editorial judgement are his. The writing is Claude&apos;s. Disclosed openly, because the subject demands it.</p>
+    <p style="font-size:12px; color:#999; max-width:520px; margin:0 auto; line-height:1.7;">
+      ✦ Transparency: This manifesto was drafted with AI writing assistance and edited under the direction of <strong>Dimitri</strong> (software developer, former public servant). The concept, arguments, and editorial responsibility are his.
+    </p>
   </footer>
 
 </body>
